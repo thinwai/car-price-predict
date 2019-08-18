@@ -8,6 +8,11 @@ model = joblib.load('knn_joblib')
 def index():
 	return render_template("index.html")
 
+@app.route('/modal')
+def modal():
+    return render_template("modal.html")
+
+
 def input_to_one_hot(data):
     # initialize the target vector with zero values
     enc_input = np.zeros(6)
@@ -45,7 +50,7 @@ def predict():
     price_pred = round(price_pred, 2)
     #return json.dumps({'price':price_pred});
     #price_pred = model.predict(user_input)
-    return render_template('index.html', prediction_text=price_pred)
+    return render_template('result.html', prediction_text="Estimate price for the car is Lakhs {} ".format(price_pred))
     
     #return render_template('index.html', prediction_text='Predicted Price of This car: Rs{}'.format(price_pred))
 

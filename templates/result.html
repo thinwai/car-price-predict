@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict Car Price</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}" >
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}" >
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.min.css')}}" >
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.css')}}" >
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.css')}}" >
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.min.css')}}" >
+
+
+</head>
+<body class="bg-light">
+<div class="container mt-5 bg-light">
+	<div class="row">
+		<div class="col-md-4"></div>
+
+		<div class="card col-md-4 card border-info mb-5">
+			<div class="card-header border-success">
+					
+				<h1>Used Car Price</h1>
+			</div>
+
+			<div class="card-block text-muted mt-5 text-center">
+				<img src="static/img/car.png" alt="" class="img-fluid">
+				<h2>{{ prediction_text }} </h2>
+			</div>
+			<div class="card-fotter"></div>
+
+
+		</div>
+
+		<div class="col-md-4"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/popper.js')}}"></script>
+
+</body>
+</html>
